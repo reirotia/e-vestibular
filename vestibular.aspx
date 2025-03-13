@@ -9,7 +9,6 @@
 
 
     <script type="text/javascript" src="js/jquery.min.js"> </script>
-    <script type="text/javascript" src="js/notification.js"> </script>
     <script type="text/javascript" src="js/timer.js"> </script>
 
 
@@ -314,39 +313,14 @@
 
 <footer>
     <script src="js/javaScript.js"></script>
-    <script>
-        /**
-        function step(op) {
-            $(document).ready(function () {
-                $('div.setup-panel div a[href="#' + op + '"]').addClass('btn-danger');
+   
+    
+    
 
-            });
-        }
-        */
-    </script>
-    
-    
-    <script>
-        /*
-        setTimeout(function () {
-            window.location.href = "info.aspx";
-        }, 3000000);
-        */
-    </script>
 
    
     
-     <script>
-         /*
-        $(document).ready(function () {
 
-            $("#textarea").bind('paste', function (e) {
-                e.preventDefault();
-            });
-
-        });
-        */
-    </script>
 
 
     <script>
