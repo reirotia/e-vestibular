@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/3.2.1/jquery.min.js"></script>
+        <link href="css/styleMaster.css" rel="stylesheet" />
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <nav class="navbar">
+
+        <a class="navbar-brand navbar-center"><img src="assets/img/favicons/E.jpeg" /> </a>
+
+        
+        <form class="form-inline">  
+        </form>
+         
+
+    </nav>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

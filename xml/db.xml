@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<config>
+  <strcnn>Data Source=mssql.unibolsasbrasil.com.br,1433;Network Library=DBMSSOCN;Initial Catalog=unibolsasbrasil;User ID=unibolsasbrasil;Password=Alex1980</strcnn>
+</config>
