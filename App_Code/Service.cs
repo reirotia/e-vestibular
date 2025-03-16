@@ -240,12 +240,14 @@ public class Service : System.Web.Services.WebService
         int questao = 0;
         DataSet dsResposta;
         DataSet dsEmail;
-        string str = "select evestibularcod,respostaPergunta,redacao,codeletronico from vestibularEletronico where tipoProva1 is null and respostaPergunta is not null";
+        string str = "select evestibularcod,respostaPergunta,redacao,codeletronico from vestibularEletronico where tipoProva1 is null and respostaPergunta is not null order by codEletronico asc";
         ds = bd.ConsultaSQL(str);
         for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
         {
             countTipo1 = 0;
             countTipo4 = 0;
+            questao = 0;
+           
             string[] respostaPerguntas = ds.Tables[0].Rows[i]["respostaPergunta"].ToString().Split(new char[] { '|' });
             foreach (string respostaPergunta in respostaPerguntas)
             {
@@ -271,6 +273,7 @@ public class Service : System.Web.Services.WebService
             }
             countTipo1 = countTipo1 * 200;
             countTipo4 = countTipo4 * 200;
+           
             if (ds.Tables[0].Rows[i]["redacao"].ToString().Length == 0)
             {
                 if ((countTipo1 + countTipo4) == 0)
