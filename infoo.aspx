@@ -43,8 +43,7 @@
         <h2>Regras para realização do Processo Seletivo On-line</h2>
         <div class="row">
 
-            usuario[] usuarios = apicosultausuartios.getUsuario(cpf); 
-                 
+
              
             <%System.Data.DataSet dsDados = Session["dsDados"] as System.Data.DataSet; %>           
             <%string img = "assets/img/logo/"  + dsDados.Tables[0].Rows[0]["faculdadeId"]    +  ".png";%>

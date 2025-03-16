@@ -65,11 +65,10 @@
     <!------ Include the above in your HEAD tag ---------->
     
 
-</head>
-
 <body>
     <div class="container">
         <form id="per" runat="server">
+            
             <%System.Data.DataSet ds = Session["ds"] as System.Data.DataSet; %>
             <%System.Data.DataSet dsResposta; %>
             <%System.Data.DataSet dsRedacao = Session["dsRedacao"] as System.Data.DataSet; %>
@@ -115,6 +114,7 @@
 
                 </div>
                 <div class="panel-heading">
+                    
                     <h3 class="panel-title">1 - <%=ds.Tables[0].Rows[0]["pergunta"].ToString()%></h3>
                 </div>
                 <%if (ds.Tables[0].Rows[0]["img"].ToString() != "0") %>

@@ -18,7 +18,7 @@ public partial class finalizar : System.Web.UI.Page
         ManipulacaoBanco bd = new ManipulacaoBanco();
         string str = "";
         string Id = Request["id"].ToString();
-        if (Session["codEletronico"]!=null)
+        if (Id!= null)
         {
             if (Session["penalizado"] == null)
             {
