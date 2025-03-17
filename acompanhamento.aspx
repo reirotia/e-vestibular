@@ -147,7 +147,7 @@
                 <div style="text-align: center; padding-top: 100px;">
                     <img src="assets/img/logo/logo-meio-paginas-2.png" />
                     <h2>Boletim de desempenho</h2>
-                    <h2>Vestibular online 2025.2</h2>
+                    <h2>Vestibular online <%=Session["semestre"].ToString() %></h2>
                    
                     <h2>O candidato participou do evestibular online</h2>
                                     <div style="text-align: left; padding: 30px;">

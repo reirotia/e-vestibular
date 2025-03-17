@@ -6,11 +6,13 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using CAD;
+
 public partial class acompanhamento : System.Web.UI.Page
 {
     DataSet ds;
     ManipulacaoBanco bd = new ManipulacaoBanco();
     string Id;
+   
     protected void Page_Load(object sender, EventArgs e)
     {
         Id = Request["Id"];
@@ -19,6 +21,9 @@ public partial class acompanhamento : System.Web.UI.Page
         + " from vestibularEletronico v inner join  CadastroEletronico c on v.codEletronico=c.codEletronico where c.codEletronico=" + Id;
         ds = bd.ConsultaSQL (str);
         Session.Add("ds",ds);
+        str = ScriptSql.semestreAtual + Parametro.SEMESTRE;
+        ds = bd.ConsultaSQL(str);
+        Session.Add("semestre", ds.Tables[0].Rows[0]["parametro"].ToString());
 
         
     }

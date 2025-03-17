@@ -17,7 +17,7 @@
                 <div style="text-align: center; padding-top: 100px;">
                     <img src="https://evestibular.com.br/assets/img/logo/logo-meio-paginas-2.png" />
                     <h2>Boletim de desempenho</h2>
-                    <h2>Vestibular online 2025.2</h2>
+                    <h2>Vestibular online <%=Session["semestre"].ToString() %></h2>
                     <img src="https://evestibular.com.br/assets/img/logo/logo-unirb.png" />
                     <h3>O candidato participou do evestibular online</h3>
 

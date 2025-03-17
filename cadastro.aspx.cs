@@ -82,8 +82,14 @@ public partial class cadastro : System.Web.UI.Page
 
             bd.ExecutarSQLsemfechar(str);
             int COD = Convert.ToInt32(bd.RetornarIDENTITYeFechar());
+            
+            str = ScriptSql.semestreAtual + Parametro.SEMESTRE;
+            ds = bd.ConsultaSQL(str);        
+            string semestre = ds.Tables[0].Rows[0]["semestre"].ToString();
+           
+
             // COMENTADO PARA TESTE DIA 03/09/2022
-            //EnviarContatoPorEmail(Request["inputnome"].ToString().ToUpper(), "", "CADASTRO EVESTIBULAR CONCLUÍDO COM SUCESSO", "2025.2", Request["inputFaculdade"] + ".png", dtCadastro.ToString("yyyy/dd/MM hh:mm:ss"), cpf, Request["txtEmail"], Request["textoFormaIngresso"], Request["formaIngresso"]);
+            //EnviarContatoPorEmail(Request["inputnome"].ToString().ToUpper(), "", "CADASTRO EVESTIBULAR CONCLUÍDO COM SUCESSO", semestre , Request["inputFaculdade"] + ".png", dtCadastro.ToString("yyyy/dd/MM hh:mm:ss"), cpf, Request["txtEmail"], Request["textoFormaIngresso"], Request["formaIngresso"]);
 
            // Session.Add("codEletronico", COD);
            // Session.Add("formaIngresso", Request["formaIngresso"]);
