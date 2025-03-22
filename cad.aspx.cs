@@ -44,7 +44,7 @@ public partial class cad : System.Web.UI.Page
 
          
         string str="";
-        DataSet ds;
+        DataSet ds, dsSemestre ;
         string cpf = String.Join("", Regex.Split(Request.Form["inputCpf"].ToString(), @"[^\d]"));
         str = "select codEletronico,dtProvafinalizada from CadastroEletronico where cpf='" + cpf + "'";
         ds = bd.ConsultaSQL(str);
@@ -60,13 +60,18 @@ public partial class cad : System.Web.UI.Page
             str = "insert into CadastroEletronico (nome,cpf,faculdadeId,curso,dtInscricao,tipoIngresso,nomeArquivo,email,celular,instagram,semestre,campusId) values ('"
                + Request["inputnome"].ToString().ToUpper() + "','" + cpf + "'," + Request["inputFaculdade"] + ",'" + Request["inputCurso"] + "'"
                + ",'" + dtCadastro.ToString("yyyy/dd/MM hh:mm:ss") + "'," + Request["formaIngresso"] + ",'"
-               + fileArquivo.FileName + "','" + Request["txtemail"] + "','" + Request["celular"] + "','" + Request["Instagram"] + "','2000.1'," + Request["inputCampus"] + ")";
+               + fileArquivo.FileName + "','" + Request["txtemail"] + "','" + Request["celular"] + "','" + Request["Instagram"] + "','2005.2'," + Request["inputCampus"] + ")";
             str = RemoverAcentos(str);
 
             bd.ExecutarSQLsemfechar(str);
             int COD = Convert.ToInt32(bd.RetornarIDENTITYeFechar());
             //COMENTADO PARA TESTE DIA 11/10/2023 
-            //EnviarContatoPorEmail(Request["inputnome"].ToString().ToUpper(), "", "CADASTRO EVESTIBULAR CONCLUÍDO COM SUCESSO", "2025.2", Request["inputFaculdade"] + ".png", dtCadastro.ToString("yyyy/dd/MM hh:mm:ss"), cpf, Request["txtemail"], Request["textoFormaIngresso"], Request["formaIngresso"]);
+
+            str = ScriptSql.semestreAtual + Parametro.SEMESTRE;
+            dsSemestre = bd.ConsultaSQL(str);
+            String semestre =   dsSemestre.Tables[0].Rows[0]["semestre"].ToString();
+
+            //EnviarContatoPorEmail(Request["inputnome"].ToString().ToUpper(), "", "CADASTRO EVESTIBULAR CONCLUÍDO COM SUCESSO", semestre, Request["inputFaculdade"] + ".png", dtCadastro.ToString("yyyy/dd/MM hh:mm:ss"), cpf, Request["txtemail"], Request["textoFormaIngresso"], Request["formaIngresso"]);
             Session.Add("codEletronico", COD);
             Session.Add("formaIngresso", Request["formaIngresso"]);
             if (Request["formaIngresso"] != "1")

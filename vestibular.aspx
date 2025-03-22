@@ -9,7 +9,6 @@
 
 
     <script type="text/javascript" src="js/jquery.min.js"> </script>
-    <script type="text/javascript" src="js/notification.js"> </script>
     <script type="text/javascript" src="js/timer.js"> </script>
 
 
@@ -66,11 +65,10 @@
     <!------ Include the above in your HEAD tag ---------->
     
 
-</head>
-
 <body>
     <div class="container">
         <form id="per" runat="server">
+            
             <%System.Data.DataSet ds = Session["ds"] as System.Data.DataSet; %>
             <%System.Data.DataSet dsResposta; %>
             <%System.Data.DataSet dsRedacao = Session["dsRedacao"] as System.Data.DataSet; %>
@@ -116,6 +114,7 @@
 
                 </div>
                 <div class="panel-heading">
+                    
                     <h3 class="panel-title">1 - <%=ds.Tables[0].Rows[0]["pergunta"].ToString()%></h3>
                 </div>
                 <%if (ds.Tables[0].Rows[0]["img"].ToString() != "0") %>
@@ -314,39 +313,14 @@
 
 <footer>
     <script src="js/javaScript.js"></script>
-    <script>
-        /**
-        function step(op) {
-            $(document).ready(function () {
-                $('div.setup-panel div a[href="#' + op + '"]').addClass('btn-danger');
+   
+    
+    
 
-            });
-        }
-        */
-    </script>
-    
-    
-    <script>
-        /*
-        setTimeout(function () {
-            window.location.href = "info.aspx";
-        }, 3000000);
-        */
-    </script>
 
    
     
-     <script>
-         /*
-        $(document).ready(function () {
 
-            $("#textarea").bind('paste', function (e) {
-                e.preventDefault();
-            });
-
-        });
-        */
-    </script>
 
 
     <script>
