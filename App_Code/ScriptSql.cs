@@ -9,4 +9,5 @@ using System.Web;
 public static class ScriptSql
 {
     public static String semestreAtual = "select parametro from parametro where paramentro_id=";
+    public static int modified =  0;
 }

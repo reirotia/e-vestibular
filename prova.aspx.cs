@@ -17,6 +17,8 @@ public partial class _prova : System.Web.UI.Page
     string str = "";
     protected void Page_Load(object sender, EventArgs e)
     {
+        
+
         DateTime dtCadastro = DateTime.Now;
         DateTime d1;
         if (Request["codEletronico"]!= null)
