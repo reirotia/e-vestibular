@@ -35,6 +35,8 @@ public partial class Default3 : System.Web.UI.Page
 
             string variavelteste = "nome";
             string variavelteste12222 = "nome";
+            string variavelteste1 = "nome";
+            string variavelteste122221 = "nome";
 
             string str = "insert into CadastroEletronico (nome,cpf,rg,email,celular,instagram,faculdadeid,curso,tipoIngresso,campusId) ";
             str += "values (@nome,@cpf,@rg,@email,@celular,@instagram,@faculdadeId,@curso,@formaIngresso,@campusId);SELECT SCOPE_IDENTITY();";
