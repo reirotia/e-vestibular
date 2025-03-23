@@ -19,10 +19,6 @@ public class Connection
         _conexao = new SqlConnection("Server=mssql.unibolsasbrasil.com.br,1433;Database=unibolsasbrasil;User ID=unibolsasbrasil;Password=Alex1980;");
     }
 
-
-
-
-
     public static SqlConnection getConexacao()
     {
         if (_conexao == null)

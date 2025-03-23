@@ -21,6 +21,7 @@ public class pergunta
     public string img { get; set; }
     public string texto { get; set; }
     public string perguntav { get; set; }
+    public string numeroQuestao { get; set; }
 
 
 
