@@ -81,6 +81,7 @@
                 <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(24, 29, 56, .4);">
                     <div class="container">
                         <div class="row justify-content-start">
+
                             <div class="col-sm-10 col-lg-8">
                                 <h5 class="text-primary text-uppercase mb-3 animated slideInDown">Melhores Cursos</h5>
                                 <h1 class="display-3 text-white animated slideInDown">Seu vestibular online<br/> na sua mão!</h1>
