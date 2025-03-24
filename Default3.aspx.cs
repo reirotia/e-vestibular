@@ -34,6 +34,8 @@ public partial class Default3 : System.Web.UI.Page
         {
 
 
+
+
             string str = "insert into CadastroEletronico (nome,cpf,rg,email,celular,instagram,faculdadeid,curso,tipoIngresso,campusId) ";
             str += "values (@nome,@cpf,@rg,@email,@celular,@instagram,@faculdadeId,@curso,@formaIngresso,@campusId);SELECT SCOPE_IDENTITY();";
             SqlCommand cmd = new SqlCommand(str, _conexao);
